@@ -38,6 +38,7 @@ Partial Class Login
         Me.border = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.dialog = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,6 +50,7 @@ Partial Class Login
         Me.bt_close.CheckedState.Parent = Me.bt_close
         Me.bt_close.Cursor = System.Windows.Forms.Cursors.Hand
         Me.bt_close.CustomImages.Parent = Me.bt_close
+        Me.bt_close.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.bt_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.bt_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.bt_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -62,7 +64,7 @@ Partial Class Login
         Me.bt_close.Image = CType(resources.GetObject("bt_close.Image"), System.Drawing.Image)
         Me.bt_close.Location = New System.Drawing.Point(395, 0)
         Me.bt_close.Name = "bt_close"
-        Me.bt_close.PressedColor = System.Drawing.Color.Bisque
+        Me.bt_close.PressedColor = System.Drawing.Color.FromArgb(CType(CType(219, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.bt_close.ShadowDecoration.Parent = Me.bt_close
         Me.bt_close.Size = New System.Drawing.Size(32, 28)
         Me.bt_close.TabIndex = 1
@@ -80,6 +82,7 @@ Partial Class Login
         '
         'tb_user
         '
+        Me.tb_user.Animated = True
         Me.tb_user.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.tb_user.DefaultText = ""
         Me.tb_user.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -100,7 +103,8 @@ Partial Class Login
         Me.tb_user.SelectedText = ""
         Me.tb_user.ShadowDecoration.Parent = Me.tb_user
         Me.tb_user.Size = New System.Drawing.Size(278, 33)
-        Me.tb_user.TabIndex = 3
+        Me.tb_user.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.tb_user.TabIndex = 0
         '
         'Label2
         '
@@ -146,13 +150,15 @@ Partial Class Login
         Me.tb_pass.SelectedText = ""
         Me.tb_pass.ShadowDecoration.Parent = Me.tb_pass
         Me.tb_pass.Size = New System.Drawing.Size(278, 33)
-        Me.tb_pass.TabIndex = 3
+        Me.tb_pass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.tb_pass.TabIndex = 1
         '
         'bt_login
         '
         Me.bt_login.BorderRadius = 10
         Me.bt_login.CheckedState.Parent = Me.bt_login
         Me.bt_login.CustomImages.Parent = Me.bt_login
+        Me.bt_login.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.bt_login.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.bt_login.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.bt_login.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -202,6 +208,7 @@ Partial Class Login
         Me.Guna2Button3.BorderRadius = 10
         Me.Guna2Button3.CheckedState.Parent = Me.Guna2Button3
         Me.Guna2Button3.CustomImages.Parent = Me.Guna2Button3
+        Me.Guna2Button3.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -249,6 +256,10 @@ Partial Class Login
         Me.dialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
         Me.dialog.Text = Nothing
         '
+        'Guna2ShadowForm1
+        '
+        Me.Guna2ShadowForm1.TargetForm = Me
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
@@ -292,4 +303,5 @@ Partial Class Login
     Friend WithEvents border As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents PictureBox1 As PictureBox
     Public WithEvents dialog As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
 End Class

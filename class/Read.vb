@@ -21,6 +21,7 @@ Public Class Read
         Else
             Login.dialog.Text = "Username or Password Incorrect!!"
             Login.dialog.Show()
+            Login.tb_user.Select()
         End If
 
         reader.Close()
