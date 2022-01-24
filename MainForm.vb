@@ -4,10 +4,14 @@
     End Sub
 
     Private Sub bt_add_borrow_Click(sender As Object, e As EventArgs) Handles bt_add_borrow.Click
-        Dim f As Login = New Login()
-        f.TopLevel = False
-        Me.Controls.Add(f)
-        f.Show()
-        f.BringToFront()
+        Dim tform As New TransactInfo()
+        tform.ShowDialog()
+        tform.StartPosition = FormStartPosition.CenterParent
+    End Sub
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
+
+

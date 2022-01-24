@@ -49,4 +49,8 @@ Public Class Login
         tb_user.FillColor = Color.White
         tb_pass.FillColor = Color.White
     End Sub
+
+    Private Sub Login_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+
+    End Sub
 End Class
